@@ -1,0 +1,23 @@
+
+#fingerprints[data-v-5855092f] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 2147483647;
+}
+#fingerprints .touch[data-v-5855092f] {
+    position: fixed;
+    pointer-events: none;
+}
+#fingerprints .fade-leave-active[data-v-5855092f] {
+    transition: opacity .3s;
+}
+#fingerprints .fade-enter-active[data-v-5855092f] {
+    transition: none;
+}
+#fingerprints .fade-leave-to[data-v-5855092f] {
+    opacity: 0;
+}
+
+/*# sourceMappingURL=vue-fingerprints.css.map*/

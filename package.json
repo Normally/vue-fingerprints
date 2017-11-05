@@ -1,0 +1,54 @@
+{
+    "name": "vue-fingerprints",
+    "version": "0.0.1",
+    "description": "Display touch gestures and clicks on screen",
+    "main": "index.js",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=production webpack --progress --hide-modules --watch",
+        "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+        "example": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.example.js --inline --hot",
+        "buildexample": "cross-env NODE_ENV=production webpack --config webpack.config.example.js --progress --hide-modules"
+    },
+    "keywords": [
+        "vue",
+        "touches",
+        "touch gestures",
+        "taps",
+        "clicks",
+        "fingerprints"
+    ],
+    "author": "Normally",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-transform-runtime": "6.23.0",
+        "babel-preset-es2015": "6.24.1",
+        "babel-preset-stage-2": "6.24.1",
+        "clean-webpack-plugin": "^0.1.16",
+        "cross-env": "^5.0.5",
+        "css-loader": "^0.28.7",
+        "file-loader": "^1.1.5",
+        "friendly-errors-webpack-plugin": "^1.6.1",
+        "image-webpack-loader": "3.4.2",
+        "node-sass": "4.5.3",
+        "prompt": "^1.0.0",
+        "sass-loader": "6.0.6",
+        "style-loader": "^0.19.0",
+        "template-file": "^3.0.1",
+        "vue-loader": "^13.3.0",
+        "vue-style-loader": "^3.0.3",
+        "vue-template-compiler": "2.4.4",
+        "webpack": "^3.7.1",
+        "webpack-dev-server": "2.9.1"
+    },
+    "dependencies": {
+        "eslint": "^4.0.0",
+        "eslint-plugin-vue": "^3.13.1",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "html-webpack-plugin": "^2.30.1",
+        "vue": "2.4.4"
+    },
+    "repository": "https://github.com/Normally/vue-fingerprints.git",
+    "private": false
+}
