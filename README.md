@@ -3,7 +3,7 @@
 <!-- [![npm](https://img.shields.io/npm/v/vue-fingerprints.svg) ![npm](https://img.shields.io/npm/dm/vue-fingerprints.svg)](https://www.npmjs.com/package/vue-fingerprints) -->
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 
-Display touches gestures and clicks on screen. Perfect for video capture.
+Display touch gestures and clicks on screen. Perfect for video capture.
 
 
 ## Install
