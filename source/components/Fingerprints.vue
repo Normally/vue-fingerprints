@@ -76,13 +76,6 @@
     pointer-events:none;
     z-index: 2147483647;
     .touch{
-      // width:50px;
-      // height:50px;
-      // margin-top:-25px;
-      // margin-left:-25px;
-      // border-radius: 25px;
-      // box-shadow: 0 0 10px rgba(#000, 0.5);
-      // background: rgba(#FFF, 0.8);
       position: fixed;
       pointer-events:none;
     }

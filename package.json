@@ -6,8 +6,8 @@
     "scripts": {
         "dev": "cross-env NODE_ENV=production webpack --progress --hide-modules --watch",
         "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-        "example": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.example.js --inline --hot",
-        "buildexample": "cross-env NODE_ENV=production webpack --config webpack.config.example.js --progress --hide-modules"
+        "docs": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.docs.js --inline --hot",
+        "builddocs": "cross-env NODE_ENV=production webpack --config webpack.config.docs.js --progress --hide-modules"
     },
     "keywords": [
         "vue",
@@ -30,7 +30,6 @@
         "css-loader": "^0.28.7",
         "file-loader": "^1.1.5",
         "friendly-errors-webpack-plugin": "^1.6.1",
-        "image-webpack-loader": "3.4.2",
         "node-sass": "4.5.3",
         "prompt": "^1.0.0",
         "sass-loader": "6.0.6",
@@ -40,9 +39,7 @@
         "vue-style-loader": "^3.0.3",
         "vue-template-compiler": "2.4.4",
         "webpack": "^3.7.1",
-        "webpack-dev-server": "2.9.1"
-    },
-    "dependencies": {
+        "webpack-dev-server": "2.9.1",
         "eslint": "^4.0.0",
         "eslint-plugin-vue": "^3.13.1",
         "extract-text-webpack-plugin": "^3.0.2",

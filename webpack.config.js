@@ -7,31 +7,6 @@ let path = require('path'),
 let NODE_ENV = process.env.NODE_ENV;
 var config = require('./package.json');
 
-var imageLoader = ['file-loader?name=img/[name]-[hash:7].[ext]'];
-// Optimize images for production build
-
-if (NODE_ENV === 'production') {
-    imageLoader.push({
-        loader: 'image-webpack-loader',
-        query: {
-            mozjpeg: {
-                progressive: true,
-            },
-            gifsicle: {
-                interlaced: false,
-            },
-            optipng: {
-                optimizationLevel: 4,
-            },
-            pngquant: {
-                quality: '75-90',
-                speed: 3,
-            },
-        },
-    });
-}
-
-
 module.exports = {
     entry: {
         js: './source/index.js'
@@ -81,7 +56,7 @@ module.exports = {
             loader: 'file-loader?name=videos/[name].[ext]'
         }, {
             test: /\.(jpe?g|png|gif|svg)$/i,
-            loaders: imageLoader
+            loaders: 'file-loader?name=img/[name]-[hash:7].[ext]'
         }, {
             test: /\.(wav|mp3)$/,
             loader: 'file-loader?name=sounds/[name].[ext]&context=./source/sounds'
@@ -141,14 +116,3 @@ if (NODE_ENV === 'production') {
     ])
 }
 
-
-if (NODE_ENV === 'fast') {
-    module.exports.devtool = '#eval'
-    module.exports.plugins = (module.exports.plugins || []).concat([
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        })
-    ])
-}

@@ -10,10 +10,10 @@ var config = require('./package.json');
 
 module.exports = {
     entry: {
-        js: './example/index.js'
+        js: './docs/source/index.js'
     },
     output: {
-        path: path.resolve(__dirname, 'example/dist/'),
+        path: path.resolve(__dirname, 'docs/'),
         filename: 'bundle.js',
     },
     module: {
@@ -57,16 +57,16 @@ module.exports = {
             loaders: 'file-loader?name=img/[name]-[hash:7].[ext]'
         }, {
             test: /\.(wav|mp3)$/,
-            loader: 'file-loader?name=sounds/[name].[ext]&context=./example/sounds'
+            loader: 'file-loader?name=sounds/[name].[ext]&context=./docs/source/sounds'
         }]
     },
     resolve: {
         extensions: ['.js', '.json', '.vue', '.scss'],
         alias: {
             'vue$': 'vue/dist/vue.common.js',
-            'components': path.resolve(__dirname, 'example/components'),
-            'sass': path.resolve(__dirname, 'example/sass'),
-            'js': path.resolve(__dirname, 'example/js')
+            'components': path.resolve(__dirname, 'docs/source/components'),
+            'sass': path.resolve(__dirname, 'docs/source/sass'),
+            'js': path.resolve(__dirname, 'docs/source/js')
         }
     },
     devServer: {
@@ -84,7 +84,7 @@ module.exports = {
     plugins: [
         new FriendlyErrorsWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: 'example/index.html',
+            template: 'docs/source/index.html',
             hash: true
         }),
     ]
@@ -104,9 +104,9 @@ if (NODE_ENV === 'production') {
             },
             'VERSION': JSON.stringify(config.version)
         }),
-        new CleanWebpackPlugin(['example/dist'], {
-            exclude: ['favicon']
-        }),
+        // new CleanWebpackPlugin(['docs'], {
+        //     exclude: ['favicon']
+        // }),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: false,
             comments: false,
