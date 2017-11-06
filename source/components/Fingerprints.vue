@@ -50,7 +50,7 @@
       },
       bind(type){
         for(var i in this.events){
-          window[type](i, this.events[i])
+          window[type](i, this.events[i], true)
         }
       }
     },
