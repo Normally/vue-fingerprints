@@ -18,13 +18,6 @@ yarn add vue-fingerprints
 ## Usage
 
 ```javascript
-
-// Install as plugin
-import Vue from 'vue'
-import {FingerprintsPlugin} from 'vue-fingerprints'
-Vue.use(FingerprintsPlugin)
-
-// Or import in template
 import Fingerprints from 'vue-fingerprints'
 export default {
   components: {
